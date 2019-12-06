@@ -28,16 +28,23 @@
 
 	<body class="home blog masthead-fixed list-view full-width grid">
 		<div id="page" class="hfeed site">
+
+			<!-- 배너칸 search 설정 -->
 			<header id="masthead" class="site-header" role="banner">
 				<div class="header-main">
 					<h1 class="site-title"><a href="http:///dprigh.github.io//index.html" rel="home">dprigh blog</a></h1>
-	
+					
+					<!-- search link -->
 					<div class="search-toggle">
 						<a href="#search-container" class="screen-reader-text">Search</a>
 					</div>
 
+
+					<!-- Primary Menu button -->
 					<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 						<button class="menu-toggle">Primary Menu</button>
+
+						<!-- Skip to content button -->
 						<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
 						<div class="nav-menu">
 							<ul>
@@ -47,6 +54,8 @@
 					</nav>
 				</div>
 
+
+				<!-- 검색 하는 텍스트창 -->
 				<div id="search-container" class="search-box-wrapper hide">
 					<div class="search-box">
                 	<script type="text/javascript">
@@ -59,9 +68,13 @@
 							<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
 								<input name="q" type="hidden" />
 	    						<label>
+	    							<!-- 검색 텍스트창 왼쪽 'search for' 텍스트 표시 -->
 	        						<span class="screen-reader-text">Search for:</span>
+	        						<!-- 검색 텍스트창 안쪽 'Search... ' 텍스트 표시 -->
 	        						<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
 	    						</label>
+	    						
+								<!-- 검색 텍스트창 우측 search 버튼 생성 -->
 	    						<input type="submit" value="Search" class="search-submit" />
 							</form>
 						</aside>
@@ -75,6 +88,7 @@
 						<div id="content" class="site-content" role="main"></div>
 					</div>
 
+					<!-- 메인 part에서 머릿글 부분 -->
 					<div id="secondary">
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 							<script type="text/javascript">
@@ -86,21 +100,32 @@
 							<aside id="recent-posts-3" class="widget widget_recent_entries"></aside>
 							<aside id="categories-3" class="widget widget_categories">
 								<h1 class="widget-title">Categories</h1>
+
+								<!-- 카테고리 하위 링크 만들기 -->
 								<ul>	</ul>
+								<ul>	</ul>
+								<ul>	</ul>
+								<ul>	</ul>
+								<ul>	</ul>
+
 							</aside>
 						</div>
 					</div>
-
-					<script src="https://utteranc.es/client.js"
-    	  		  			repo="dprigh/hugo_comments"
-    		    			issue-term="pathname"
-     			   			theme="github-light"
-      		  				crossorigin="anonymous"
-    		    			async>
-					</script>
 				</div>
+
+				<!-- 댓글 스크립트 -->
+				<script src="https://utteranc.es/client.js"
+    	  				repo="dprigh/hugo_comments"
+    		    		issue-term="pathname"
+     					theme="github-light"
+      		  			crossorigin="anonymous"
+    		    		async>
+				</script>
+				
 			</div>
 
+			
+			<!-- 바닥글 making link -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<a href="https://gohugo.io">Proudly powered by Hugo</a>
@@ -109,7 +134,8 @@
 		</div>
 
 		<script type='text/javascript' src='http:///dprigh.github.io//js/functions.js'></script>
+
 	</body>
 
-	
+
 </html>
