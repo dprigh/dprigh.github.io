@@ -7,8 +7,8 @@ features = ["blog", ]
 min_version = 0.14
 
 [author]
-    name = "Dan Hersam"
-    homepage = "http://dan.hersam.com"
+    name = "dprigh"
+    homepage = "http://dprigh.github.io/"
 
 [original]
     author =  "wordpressdotorg"
