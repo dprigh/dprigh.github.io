@@ -1,9 +1,23 @@
 # Site settings
-baseURL = "http:/dprigh.github.io/"
+baseURL = "http://dprigh.github.io/"
 languageCode = "en-us"
 title = "dprigh blog"
-theme = "hugo-twentyfourteen-theme"
+
+# Theme adjust
+theme = "twentyfourteen"
 # themesDir = "../.."
+disqusShortname = "foobar"
+
+[params]
+	Description = "dev nubi hugo blog"
+	FooBar = "testing 1 2 3"
+
+[taxonomies]
+	category = "categories"
+	tage = "tags"
+
+[permalinks]
+	post = "/:year/:slug"
 
 [author]
 	name = "dprigh"
