@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "http:/dprigh.github.io/index.xml"
+baseURL = "http:/dprigh.github.io/"
 languageCode = "en-us"
 title = "dprigh blog"
 theme = "hugo-twentyfourteen-theme"
