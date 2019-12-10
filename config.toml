@@ -4,8 +4,8 @@ languageCode = "en-us"
 title = "dprigh blog"
 
 # Theme adjust
-theme = "twentyfourteen"
-# themesDir = "../.."
+theme = "hugo-twentyfourteen-theme"
+themesDir = ""
 disqusShortname = "foobar"
 
 [params]
