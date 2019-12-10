@@ -64,10 +64,10 @@ disqusShortname = "foobar"
     # position = "Lead Engineer"
     # livesIn = "[Munich, Germany](#some-maps-url)"
     # scope = ["UX for [member dashboard](#)",
-    #    	   "Maintainer for [awesome-project](#)",
-    #    	   "Open Source [community management](#)"]
+    #    	     "Maintainer for [awesome-project](#)",
+    #    	     "Open Source [community management](#)"]
     # biography = """Jane Powers is plain awesome. He worked at Corp A and B and is open for new work.  
-	#				 Even new lines and other markdown styles are working within the bio."""
+	  # Even new lines and other markdown styles are working within the bio."""
 
   # Contact form settings
 
