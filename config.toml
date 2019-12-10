@@ -4,8 +4,8 @@ languageCode = "en-us"
 title = "dprigh blog"
 
 # Theme adjust
-theme = "hugo-twentyfourteen-theme"
-themesDir = ""
+theme = "twentyfourteen"
+# themesDir = ""
 disqusShortname = "foobar"
 
 [params]
@@ -14,14 +14,27 @@ disqusShortname = "foobar"
 
 [taxonomies]
 	category = "categories"
-	tage = "tags"
+	tag = "tags"
 
 [permalinks]
 	post = "/:year/:slug"
 
 [author]
+  primary = "dprigh"
 	name = "dprigh"
 	email = "dprigh@gmail.com"
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Disable unnecessary kinds
 # disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
