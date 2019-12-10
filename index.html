@@ -1,142 +1,230 @@
 <!DOCTYPE html>
 
-<html lang="en-us">
+<html lang="{{ with .Site.LanguageCode}}{{ . }}{{ else }}en-US{{end}}">
 	
 	<!-- 맨 위 링크 부분 -->
 	<head>
-		<meta name="generator" content="Hugo 0.60.1" />
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<!-- 타이틀 텍스트 -->
-		<title>dprigh blog</title>
-		<!-- 프로필 경로 -->
-		<link rel="profile" href="https:/gmpg.org/xfn/11">
-		<!-- [if lt IE 9] --
-		<script src="http:///dprigh.github.io/js/html5.js"></script>
-		!-- [endif] -->
-  	  	<link href="http://dprigh.github.io/" rel="alternate" type="application/rss+xml" title="dprigh blog" />
-  	  	<!-- 폰트 경로 -->
-    	<link rel='stylesheet' id='twentyfourteen-lato-css'  href='/fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
-    	<!-- 아이콘 폴더 링크 -->
-    	<link rel='stylesheet' id='genericons-css' href='http://dprigh.github.io/genericons/genericons.css' type='text/css' media='all' />
-    	<!-- 스타일 경로 -->
-		<link rel='stylesheet' id='twentyfourteen-style-css' href='http://dprigh.github.io/css/style.css' type='text/css' media='all' />
-		<!-- js 경로 -->
-		<script type='text/javascript' src='http://dprigh.github.io/js/jquery/jquery.js'></script>
-		<script type='text/javascript' src='http://dprigh.github.io/js/jquery/jquery-migrate.min.js'></script>
+		<title>{{ if .IsPage }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		{{ "<!--[if lt IE 9]>" | safeHTML }}
+		<script src="{{ .Site.BaseURL }}/js/html5.js"></script>
+		{{ "<![endif]-->" | safeHTML }}
 
+    	<link href="https://dprigh.github.io/index.xml" rel="alternate" type="application/rss+xml" title="dprigh blog" />
+
+    	<link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+
+    	<link rel='stylesheet' id='genericons-css' href='https://dprigh.github.io/genericons/genericons.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='twentyfourteen-style-css' href='https://dprigh.github.io/css/style.css' type='text/css' media='all' />
+		<!--[if lt IE 9]>
+		<link rel='stylesheet' id='twentyfourteen-ie-css'  href='/css/ie.css' type='text/css' media='all' />
+		<![endif]-->
+		<script type='text/javascript' src='https://dprigh.github.io/js/jquery/jquery.js'></script>
+		<script type='text/javascript' src='https://dprigh.github.io/js/jquery/jquery-migrate.min.js'></script>
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 	</head>
 
-
 	<body class="home blog masthead-fixed list-view full-width grid">
 		<div id="page" class="hfeed site">
-
-			<!-- 배너칸 search 설정 -->
 			<header id="masthead" class="site-header" role="banner">
 				<div class="header-main">
-					<h1 class="site-title"><a href="http://dprigh.github.io/" rel="home">dprigh blog</a></h1>
-					
-					<!-- search link -->
+					<h1 class="site-title"><a href="https://dprigh.github.io/index.html" rel="home">dprigh blog</a></h1>
+
 					<div class="search-toggle">
 						<a href="#search-container" class="screen-reader-text">Search</a>
 					</div>
 
-					<!-- Primary Menu button -->
 					<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 						<button class="menu-toggle">Primary Menu</button>
-
-						<!-- Skip to content button -->
 						<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
 						<div class="nav-menu">
 							<ul>
-						
+								{{ range .Site.Menus.main }}
+								<li class="page_item">
+									<a href="{{ .URL }}">{{ .Name }}</a>
+								</li>
+								{{ end }}
 							</ul>
 						</div>
 					</nav>
 				</div>
 
-				<!-- 검색 하는 텍스트창 -->
 				<div id="search-container" class="search-box-wrapper hide">
 					<div class="search-box">
-					<!-- 검색 텍스트 설정 -->	
-                	<script type="text/javascript">
-    					function site_search(obj) {
-    						var host = window.location.host;
-        					obj.q.value = "site:" + host + " " + obj.ss_q.value;
-    					}
-					</script>
+                		{{ partial "searchform.html" . }}
+                		<!-- searchform.html 검색창 -->
+                		<script type="text/javascript">
+    						function site_search(obj) {
+    							var host = window.location.host;
+        						obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    						}
+						</script>
+
 						<aside id="search-3" class="widget widget_search">
-							<!-- 검색 엔진 설정 -->
-							<form role="search" class="search-form" action="https://www.google.com/search" method="get" onSubmit="site_search(this)">
+							<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
 								<input name="q" type="hidden" />
-	    						<label>
-	    							<!-- 검색 텍스트창 왼쪽 'search for' 텍스트 표시 -->
-	        						<span class="screen-reader-text">Search for:</span>
-	        						<!-- 검색 텍스트창 안쪽 'Search... ' 텍스트 표시 -->
-	        						<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
-	    						</label>
-	    						
-								<!-- 검색 텍스트창 우측 search 버튼 생성 -->
+	    							<label>
+	        							<span class="screen-reader-text">Search for:</span>
+	        							<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    							</label>
 	    						<input type="submit" value="Search" class="search-submit" />
 							</form>
 						</aside>
 					</div>
 				</div>
-			</header>
+			</header><!-- #masthead -->
 
+
+			<!-- main 메인 -->
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
 					<div id="primary" class="content-area">
-						<div id="content" class="site-content" role="main"></div>
-					</div>
+						<div id="content" class="site-content" role="main">
+							<header class="archive-header">
+								<h1 class="archive-title">{{ .Title }} Archive</h1>
+							</header>
+							{{ range where site.RegularPages "Type" "in" site.Params.mainSections }}
 
-					<!-- 메인 part에서 머릿글 부분 -->
+							{{ partial "content.html" . }}
+							<!-- content.html 컨텐츠 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
+								<header class="entry-header">
+									{{ $baseurl := .Site.BaseURL }}
+									<div class="entry-meta">
+										<span class="cat-links">
+                							{{ range .Params.categories }}
+                							<a href="{{ $baseurl }}/categories/{{ lower . | urlize }}/index.html" rel="category">{{ . }}</a>
+                							{{ end }}
+										</span>
+									</div>
+									<h1 class="entry-title">{{ .Title }}</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="{{ .Permalink }}/index.html" rel="bookmark">
+												<time class="entry-date" datetime="{{ .Date }}">
+													{{ .Date.Format "January 2" }}
+												</time>
+											</a>
+										</span>
+									</div><!-- .entry-meta -->
+								</header>
+								<div class="entry-content">
+									{{ .Content }}
+								</div><!-- .entry-content -->
+								<footer class="entry-meta">
+									<span class="tag-links">		
+										{{ range .Params.tags }}
+                						<a href="{{ $baseurl}}/tags/{{ lower . | urlize }}/index.html" rel="tag">{{ . }}</a>
+            							{{ end }}
+									</span>
+								</footer>
+							</article> <!-- #post-## -->
+							{{ end }}
+						</div><!-- #content -->
+					</div><!-- #primary -->
+
+					{{ partial "sidebar.html" . }}
+					<!-- sidebar.html 사이드바 -->
 					<div id="secondary">
+						{{ if isset .Site.Params "Description" }} 
+						{{ with .Site.Params.Description }}
+						<h2 class="site-description">{{ . }}</h2>
+						{{ end }}
+						{{ end }}
+
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+							{{ partial "searchform.html" . }}
+							<!-- searchform.html 검색창 -->
 							<script type="text/javascript">
-	    						function site_search(obj) {
-	    							var host = window.location.host;
-	        						obj.q.value = "site:" + host + " " + obj.ss_q.value;
-	    						}
+    							function site_search(obj) {
+    								var host = window.location.host;
+        							obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    							}
 							</script>
-							<aside id="recent-posts-3" class="widget widget_recent_entries"></aside>
+
+							<aside id="search-3" class="widget widget_search">
+								<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
+									<input name="q" type="hidden" />
+	    								<label>
+	        								<span class="screen-reader-text">Search for:</span>
+	        								<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    								</label>
+	    								<input type="submit" value="Search" class="search-submit" />
+								</form>
+							</aside>
+
+							{{ partial "recentposts.html" . }}
+							<!-- recentposts.html 최근 포스트 -->
+							<aside id="recent-posts-3" class="widget widget_recent_entries">
+								{{ if isset .Data "Pages" }}
+								<h1 class="widget-title">Recent Posts</h1>
+								<ul>
+									{{ range first 5 (where .Data.Pages "Section" "post") }}
+									<li>
+										<a href="{{ .Permalink }}/index.html">{{ .Title }}</a>
+									</li>
+									{{ end }}
+								</ul>
+								{{ end }}
+							</aside>
+
+							{{ partial "categories.html" . }}
+							<!-- category.html 카테고리 -->
 							<aside id="categories-3" class="widget widget_categories">
 								<h1 class="widget-title">Categories</h1>
-
-								<!-- 카테고리 하위 링크 만들기 -->
-								<ul>	</ul>
-								<ul>	</ul>
-								<ul>	</ul>
-								<ul>	</ul>
-								<ul>	</ul>
-
+								<ul>
+									{{ $baseurl := .Site.BaseURL }}
+									{{ range $key, $value := .Site.Taxonomies.categories }}
+									<li class="cat-item">
+										<a href="{{ $baseurl }}/categories/{{ $key | urlize }}/index.html">{{ $key | title }}</a>
+									</li>
+									{{ end }}
+								</ul>
 							</aside>
+
 						</div>
-					</div>
-				</div>
-			</div>
+					</div><!-- #secondary -->
 
-			<!-- 댓글 스크립트 -->
-			<script src="https://utteranc.es/client.js"
-    		  		repo="dprigh/hugo_comments"
-    		  		issue-term="pathname"
-     				theme="github-light"
-      		  		crossorigin="anonymous"
-    				async>
-			</script>
+					<!-- gists.html -->
+					<aside id="categories-3" class="widget widget_categories">
+						<h1 class="widget-title">Recent Gists</h1>
+						<ul>
+        					{{ $gists := getJSON "https://api.github.com/users/spf13/gists" }}
+        					{{ range first 5 $gists }}
+              				<li><a href="{{ .html_url }}" target="_blank">{{ with .description }}{{ . }}{{ else }}(No description){{end}}</a></li>
+        					{{ end }}
+						</ul>
+					</aside>
 
-			<!-- 바닥글 making link -->
+					<!-- 댓글 스크립트 -->
+					<script src="https://utteranc.es/client.js"
+    		  				repo="dprigh/hugo_comments"
+    		  				issue-term="pathname"
+     						theme="github-light"
+      				  		crossorigin="anonymous"
+    						async>
+					</script>
+
+				</div><!-- #main-content -->
+
+			</div><!-- #main -->
+			
+
+			
+			<!-- footer.html 바닥글 -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<a href="https://gohugo.io">Proudly powered by Hugo</a>
-				</div>
-			</footer>
-		</div>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
 
-		<script type='text/javascript' src='http://dprigh.github.io/js/functions.js'></script>
-
+		<script type='text/javascript' src='https://dprigh.github.io/js/functions.js'></script>
 	</body>
-
 
 </html>
