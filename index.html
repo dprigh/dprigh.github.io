@@ -93,6 +93,90 @@
 			<!-- main 메인 -->
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
+
+					<!--
+					{{ partial "sidebar.html" . }} = 사이드바
+					-->
+					<div id="secondary">
+						<!-- {{ if isset .Site.Params "Description" }} 
+						{{ with .Site.Params.Description }} -->
+						<h2 class="site-description"><!-- {{ . }} --></h2>
+						<!-- {{ end }}
+						{{ end }} -->
+						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+							<!--
+							{{ partial "searchform.html" . }} = 검색창
+							-->
+							<script type="text/javascript">
+    							function site_search(obj) {
+    								var host = window.location.host;
+        							obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    							}
+							</script>
+
+							<aside id="search-3" class="widget widget_search">
+								<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
+									<input name="q" type="hidden" />
+	    								<label>
+	        								<span class="screen-reader-text">Search for:</span>
+	        								<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    								</label>
+	    								<input type="submit" value="Search" class="search-submit" />
+								</form>
+							</aside>
+
+
+							<!--
+							{{ partial "recentposts.html" . }} = 최근 포스트
+							-->
+							<aside id="recent-posts-3" class="widget widget_recent_entries">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">Recent Posts</h1>
+								<ul>
+									<!-- {{ range first 5 (where .Data.Pages "Section" "post") }} -->
+									<li>
+										<a href="{{ .Permalink }}/index.html"><!-- {{ .Title }} --></a>
+									</li>
+									<!-- {{ end }} -->
+								</ul>
+								<!-- {{ end }} -->
+							</aside>
+
+
+							<!--
+							{{ partial "categories.html" . }} = 카테고리
+							-->
+							<aside id="categories-3" class="widget widget_categories">
+								<h1 class="widget-title">Categories</h1>
+								<ul>
+									<!-- {{ $baseurl := .Site.BaseURL }}
+									{{ range $key, $value := .Site.Taxonomies.categories }} -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!-- {{ $key | title }} --></a>
+									</li>
+									<!-- {{ end }} -->
+								</ul>
+							</aside>
+
+
+							<!-- gists.html
+							<aside id="categories-3" class="widget widget_categories">
+								<h1 class="widget-title">Recent Gists</h1>
+								<ul>
+        							<!- {{ $gists := getJSON "https://api.github.com/users/spf13/gists" }}
+        							{{ range first 5 $gists }} ->
+              						<li><a href="{{ .html_url }}" target="_blank"><!- {{ with .description }}{{ . }}{{ else }}(No description){{end}} -></a></li>
+        							<!- {{ end }} ->
+								</ul>
+							</aside>
+							-->
+						</div>
+					</div><!-- #secondary -->
+
+
+
+
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
 
@@ -154,6 +238,13 @@
 							</article> <!-- #post-## -->
 							<!-- {{ end }} -->
 
+
+
+
+
+
+
+
 							<!-- 메인 부분 계속 추가 하려면 여기에 -->
 							<article class="post type-post status-publish format-standard hentry">
 								<!-- .entry-header -->
@@ -212,7 +303,8 @@
 						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 
-						<!-- 댓글 스크립트 -->
+						<!--
+						댓글 스크립트 메인에는 필요가 없어서 숨김 ->
 						<script src="https://utteranc.es/client.js"
     		  				repo="dprigh/hugo_comments"
     		  				issue-term="pathname"
@@ -220,163 +312,23 @@
       				  		crossorigin="anonymous"
     						async>
 						</script>
+						-->
 					</div><!-- #primary -->
 
-
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-					<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-
-					<!--
-					{{ partial "sidebar.html" . }} = 사이드바
-					-->
-					<div id="secondary">
-						<!-- {{ if isset .Site.Params "Description" }} 
-						{{ with .Site.Params.Description }} -->
-						<h2 class="site-description"><!-- {{ . }} --></h2>
-						<!-- {{ end }}
-						{{ end }} -->
-						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-							<!--
-							{{ partial "searchform.html" . }} = 검색창
-							-->
-							<script type="text/javascript">
-    							function site_search(obj) {
-    								var host = window.location.host;
-        							obj.q.value = "site:" + host + " " + obj.ss_q.value;
-    							}
-							</script>
-
-							<aside id="search-3" class="widget widget_search">
-								<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
-
-									<input name="q" type="hidden" />
-	    								<label>
-	        								<span class="screen-reader-text">Search for:</span>
-	        								<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
-	    								</label>
-	    								<input type="submit" value="Search" class="search-submit" />
-								</form>
-							</aside>
-
-
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-
-							<!--
-							{{ partial "recentposts.html" . }} = 최근 포스트
-							-->
-							<aside id="recent-posts-3" class="widget widget_recent_entries">
-								<!-- {{ if isset .Data "Pages" }} -->
-								<h1 class="widget-title">Recent Posts</h1>
-								<ul>
-									<!-- {{ range first 5 (where .Data.Pages "Section" "post") }} -->
-									<li>
-										<a href="{{ .Permalink }}/index.html"><!-- {{ .Title }} --></a>
-									</li>
-									<!-- {{ end }} -->
-								</ul>
-								<!-- {{ end }} -->
-							</aside>
-
-
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-
-							<!--
-							{{ partial "categories.html" . }} = 카테고리
-							-->
-							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Categories</h1>
-								<ul>
-									<!-- {{ $baseurl := .Site.BaseURL }}
-									{{ range $key, $value := .Site.Taxonomies.categories }} -->
-									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!-- {{ $key | title }} --></a>
-									</li>
-									<!-- {{ end }} -->
-								</ul>
-							</aside>
-
-
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-							<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-
-							<!-- gists.html
-							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Recent Gists</h1>
-								<ul>
-        							<!- {{ $gists := getJSON "https://api.github.com/users/spf13/gists" }}
-        							{{ range first 5 $gists }} ->
-              						<li><a href="{{ .html_url }}" target="_blank"><!- {{ with .description }}{{ . }}{{ else }}(No description){{end}} -></a></li>
-        							<!- {{ end }} ->
-								</ul>
-							</aside>
-							-->
-
-
-
-
-
-
-
-						</div>
-
-
-					</div><!-- #secondary -->
-
-
+			
 				</div><!-- #main-content -->
-
-
 			</div><!-- #main -->
 			
+		
 
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
-			
 			<!-- footer.html 바닥글 -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<a href="https://gohugo.io">Proudly powered by Hugo</a>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
-
-
 		</div><!-- #page -->
-
-
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
 
 		<script type='text/javascript' src='https://dprigh.github.io/js/functions.js'></script>
 	</body>
