@@ -27,16 +27,6 @@
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 	</head>
 
-
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-
-
 	<body class="home blog masthead-fixed list-view full-width grid">
 		<div id="page" class="hfeed site">
 			<header id="masthead" class="site-header" role="banner">
@@ -52,13 +42,12 @@
 						<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
 						<div class="nav-menu">
 							<ul>
-								<!-- {{ range .Site.Menus.main }} -->
-								<!-- 메인 메뉴 -->
+								<!-- 상단 링크 추가 -->
 								<li class="page_item">
-									<!-- 메뉴 추가(링크 필요) -->
-									<a href="https://dprigh.github.io/about/index.html">about</a>
+									<a href="https://dprigh.github.io/about/about.html">about</a>
 								</li>
-								<!-- {{ end }} -->
+
+
 							</ul>
 						</div>
 					</nav>
@@ -107,12 +96,11 @@
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
 
-
-							<!-- archive-header 이거 왜 있는지 모름 -->
+							<!-- archive-header 이거 왜있는지 모르겠음.
 							<header class="archive-header">
-								<h1 class="archive-title"><!-- {{ .Title }} -->Archive</h1>
+								<h1 class="archive-title"><!- {{ .Title }} ->Archive</h1>
 							</header>
-
+							-->
 
 							<!-- {{ range where site.RegularPages "Type" "in" site.Params.mainSections }} -->
 
@@ -125,16 +113,23 @@
 									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-                							<!-- {{ range .Params.categories }} -->
-                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!-- {{ lower . | urlize }} + {{ . }} --></a>
-                							<!-- {{ end }} -->
+                							<!-- {{ range .Params.categories }} ->
+                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
+                							<!- {{ end }} -->
 										</span>
 									</div>
-									<h1 class="entry-title"><!-- {{ .Title }} --></h1>
+
+
+
+									<h1 class="entry-title">github</h1>
+
+
+
 									<div class="entry-meta">
 										<span class="entry-date">
-											<a href="{{ .Permalink }}/index.html" rel="bookmark">
-												<time class="entry-date" datetime="December 11">
+											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
+													December 11
 													<!-- {{ .Date.Format "January 2" }} -->
 												</time>
 											</a>
@@ -143,13 +138,64 @@
 								</header>
 
 								<div class="entry-content">
+									<p>This is a new page using github.</p>
 									<!-- {{ .Content }} -->
 								</div><!-- .entry-content -->
 
 								<footer class="entry-meta">
 									<span class="tag-links">		
 										<!-- {{ range .Params.tags }} -->
-                						<a href="https://dprigh.github.io/categories/index.html" rel="tag"><!-- {{ . }} --></a>
+                						<a href="https://dprigh.github.io/categories/github/github.html" rel="tag">
+                							.github
+                						</a>
+            							<!-- {{ end }} -->
+									</span>
+								</footer>
+							</article> <!-- #post-## -->
+							<!-- {{ end }} -->
+
+							<!-- 메인 부분 계속 추가 하려면 여기에 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
+								<header class="entry-header">
+									<!-- {{ $baseurl := .Site.BaseURL }} -->
+									<div class="entry-meta">
+										<span class="cat-links">
+                							<!-- {{ range .Params.categories }} ->
+                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
+                							<!- {{ end }} -->
+										</span>
+									</div>
+
+
+
+									<h1 class="entry-title">post</h1>
+
+
+
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
+													December 11
+													<!-- {{ .Date.Format "January 2" }} -->
+												</time>
+											</a>
+										</span>
+									</div><!-- .entry-meta -->
+								</header>
+
+								<div class="entry-content">
+									<p>This is a new page using github.</p>
+									<!-- {{ .Content }} -->
+								</div><!-- .entry-content -->
+
+								<footer class="entry-meta">
+									<span class="tag-links">		
+										<!-- {{ range .Params.tags }} -->
+                						<a href="https://dprigh.github.io/categories/github/github.html" rel="tag">
+                							.github
+                						</a>
             							<!-- {{ end }} -->
 									</span>
 								</footer>
