@@ -79,6 +79,68 @@
 
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
+					
+
+					<!-- 좌측 사이드바 설정 -->
+					<div id="secondary">
+						<h2 class="site-description">hugo site</h2>
+						<!-- h1, h2 텍스트 사이즈 같음 -->
+
+						<!-- 좌측 사이드바에 검색탭 하나더 추가 -->
+						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+							<script type="text/javascript">
+    							function site_search(obj) {
+    								var host = window.location.host;
+        							obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    							}
+							</script>
+
+							<aside id="search-3" class="widget widget_search">
+								<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
+									<input name="q" type="hidden" />
+	    								<label>
+	        								<span class="screen-reader-text">Search for:</span>
+	        								<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    								</label>
+	    								<input type="submit" value="Search" class="search-submit" />
+								</form>
+							</aside>
+
+
+							<aside id="recent-posts-3" class="widget widget_recent_entries">
+							<!-- recent-posts-3 위치에 아무것도 표시 안함. -->
+							</aside>
+
+
+							<aside id="categories-3" class="widget widget_categories">
+								<h1 class="widget-title">Github Link</h1>
+								<ul>
+									<li class="cat-item">
+										<a href="https://github.com/dprigh?tab=repositories">dprigh</a>
+									</li>
+								</ul>
+							</aside>
+
+
+							<!-- gists.html
+							<aside id="categories-3" class="widget widget_categories">
+								<h1 class="widget-title">Recent Gists</h1>
+								<ul>
+        							<!- {{ $gists := getJSON "https://api.github.com/users/spf13/gists" }}
+        							{{ range first 5 $gists }} ->
+              						<li><a href="{{ .html_url }}" target="_blank"><!- {{ with .description }}{{ . }}{{ else }}(No description){{end}} -></a></li>
+        							<!- {{ end }} ->
+								</ul>
+							</aside>
+							-->
+
+
+						</div>
+					</div><!-- secondary -->
+
+
+					<!-- primary 메인 설정 -->
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
 							<article class="post type-post status-publish format-standard hentry">
@@ -131,65 +193,9 @@
     							async>
 							</script>
 						</div>
-					</div>
+					</div><!-- primary -->
 
-
-					<!-- 좌측 사이드바 서치바 밑에 텍스트 추가 -->
-					<div id="secondary">
-						<h2 class="site-description">hugo site</h2>
-						<!-- h1, h2 텍스트 사이즈 같음 -->
-
-						<!-- 검색바 사이드바에 하나더 추가 -->
-						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-							<script type="text/javascript">
-    							function site_search(obj) {
-    								var host = window.location.host;
-        							obj.q.value = "site:" + host + " " + obj.ss_q.value;
-    							}
-							</script>
-
-							<aside id="search-3" class="widget widget_search">
-								<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
-
-									<input name="q" type="hidden" />
-	    								<label>
-	        								<span class="screen-reader-text">Search for:</span>
-	        								<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
-	    								</label>
-	    								<input type="submit" value="Search" class="search-submit" />
-								</form>
-							</aside>
-
-
-							<aside id="recent-posts-3" class="widget widget_recent_entries">
-							<!-- recent-posts-3 위치에 아무것도 표시 안함. -->
-							</aside>
-
-
-							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Github Link</h1>
-								<ul>
-									<li class="cat-item">
-										<a href="https://github.com/dprigh?tab=repositories">dprigh</a>
-									</li>
-								</ul>
-							</aside>
-
-
-							<!-- gists.html
-							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Recent Gists</h1>
-								<ul>
-        							<!- {{ $gists := getJSON "https://api.github.com/users/spf13/gists" }}
-        							{{ range first 5 $gists }} ->
-              						<li><a href="{{ .html_url }}" target="_blank"><!- {{ with .description }}{{ . }}{{ else }}(No description){{end}} -></a></li>
-        							<!- {{ end }} ->
-								</ul>
-							</aside>
-							-->
-
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			
