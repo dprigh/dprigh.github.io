@@ -100,9 +100,9 @@
 					<div id="secondary">
 						<!-- {{ if isset .Site.Params "Description" }} 
 						{{ with .Site.Params.Description }} -->
-						<h2 class="site-description"><!-- {{ . }} --></h2>
-						<!-- {{ end }}
-						{{ end }} -->
+						<h2 class="site-description">Welcome! dprigh blog.</h2>
+						
+
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 							<!--
 							{{ partial "searchform.html" . }} = 검색창
@@ -127,18 +127,46 @@
 							</aside>
 
 
-							<!--
-							{{ partial "recentposts.html" . }} = 최근 포스트
-							-->
+							<!-- 메인 페이지 -->
+							<!-- 사이드바 메뉴 설정 -->
+							<!-- 1 -->
+							<!-- Recent post -->
+							<!-- 최근 포스트 -->
+							<!-- github / post / go / java / python / tag / cpp -->
 							<aside id="recent-posts-3" class="widget widget_recent_entries">
 								<!-- {{ if isset .Data "Pages" }} -->
 								<h1 class="widget-title">Recent Posts</h1>
 								<ul>
 									<!-- {{ range first 5 (where .Data.Pages "Section" "post") }} -->
+									<!-- 최근 5개만 표시하는거 어떻게 함? -->
+									<!-- 일단 5개 다 집어 넣음. -->
+
+									<!-- 1 -->
 									<li>
-										<a href="{{ .Permalink }}/index.html"><!-- {{ .Title }} --></a>
+										<a href="https://dprigh.github.io/categories/github/github.html">github</a>
 									</li>
-									<!-- {{ end }} -->
+									<!-- 2 -->			
+									<li>
+										<a href="https://dprigh.github.io/categories/posts/posts.html">posts</a>
+									</li>
+									<!-- 3 -->			
+									<li>
+										<a href="https://dprigh.github.io/categories/go/go.html">go</a>
+									</li>
+									<!-- 4 -->			
+									<li>
+										<a href="https://dprigh.github.io/categories/java/java.html">java</a>
+									</li>
+									<!-- 5 -->
+									<li>
+										<a href="https://dprigh.github.io/categories/python/python.html">python</a>
+									</li>
+									<!-- 6 -->
+									<!--
+									<li>
+										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
+									</li>
+									-->
 								</ul>
 								<!-- {{ end }} -->
 							</aside>
@@ -152,8 +180,65 @@
 								<ul>
 									<!-- {{ $baseurl := .Site.BaseURL }}
 									{{ range $key, $value := .Site.Taxonomies.categories }} -->
+
+									<!-- 여기는 왜 li class인가? -->
+									<!-- recent post는 그냥 li 임 -->
+									<!-- 차이점은? -->
+
+									<!-- 1 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!-- {{ $key | title }} --></a>
+										<a href="https://dprigh.github.io/categories/github/github.html">github</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 2 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/posts/posts.html">posts</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 3 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/go/go.html">go</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 4 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/java/java.html">java</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 5 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/python/python.html">python</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 6 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/tags/tags.html">tags</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
+									</li>
+
+									<!-- 7 -->
+									<li class="cat-item">
+										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
+										<!--
+											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
+										-->
 									</li>
 									<!-- {{ end }} -->
 								</ul>
@@ -253,10 +338,10 @@
 									<!-- 메인 페이지 제목 부분 -->
 									<!-- 변경해야 하는 부분! -->
 									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">post</h1>
+									<h1 class="entry-title">posts</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
-											<a href="https://dprigh.github.io/categories/posts/post.html" rel="bookmark">
+											<a href="https://dprigh.github.io/categories/posts/posts.html" rel="bookmark">
 												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
 													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
 												</time>
@@ -268,9 +353,9 @@
 								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
 									<!-- 이렇게 하면 링크 걸 수 있음. -->
-									<a href="https://dprigh.github.io/categories/posts/post.html">
+									<a href="https://dprigh.github.io/categories/posts/posts.html">
 										<h2>
-											<p>dprigh post.</p>
+											<p>dprigh posts.</p>
 											<!-- 초록색으로 하이퍼링크 나옴 -->
 										</h2>
 									</a>
@@ -279,7 +364,7 @@
 								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://dprigh.github.io/categories/posts/post.html" rel="tag">.post</a>
+                						<a href="https://dprigh.github.io/categories/posts/posts.html" rel="tag">.post</a>
 									</span>
 								</footer>
 							</article>
@@ -423,8 +508,57 @@
 							</article>
 
 							<!-- 6 -->
-							<!-- c++ -->
+							<!-- tags -->
 							<!-- 여섯번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
+								<header class="entry-header">
+									<!-- {{ $baseurl := .Site.BaseURL }} -->
+									<div class="entry-meta">
+										<span class="cat-links">
+                							<!-- {{ range .Params.categories }} ->
+                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
+                							<!- {{ end }} -->
+										</span>
+									</div>
+
+									<h1 class="entry-title">tags</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/tags/tags.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
+													December 11
+													<!-- {{ .Date.Format "January 2" }} -->
+												</time>
+											</a>
+										</span>
+									</div><!-- .entry-meta -->
+								</header>
+
+								<div class="entry-content">
+									<a href="https://dprigh.github.io/categories/tags/tags.html">
+										<h2>
+											<p>#tags#</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+									<!-- {{ .Content }} -->
+								</div><!-- .entry-content -->
+
+								<footer class="entry-meta">
+									<span class="tag-links">		
+										<!-- {{ range .Params.tags }} -->
+                						<a href="https://dprigh.github.io/categories/tags/tags.html" rel="tag">
+                							.tags
+                						</a>
+            							<!-- {{ end }} -->
+									</span>
+								</footer>
+							</article> <!-- ## 6 ## -->
+
+							<!-- 7 -->
+							<!-- c++ -->
+							<!-- 일곱번째 -->
 							<article class="post type-post status-publish format-standard hentry">
 								<!-- .entry-header -->
 								<header class="entry-header">
@@ -469,7 +603,7 @@
             							<!-- {{ end }} -->
 									</span>
 								</footer>
-							</article> <!-- ## 6 ## -->
+							</article> <!-- ## 7 ## -->
 							<!-- {{ end }} -->
 						</div><!-- #content -->
 
