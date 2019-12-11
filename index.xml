@@ -3,12 +3,11 @@
   <channel>
     <title>dprigh blog</title>
     <link>http://dprigh.github.io/</link>
-    <description>Recent content on dprigh blog</description>
+    <description>hugo nubi bloger 'o '</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="http://dprigh.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+       
   </channel>
 </rss>
