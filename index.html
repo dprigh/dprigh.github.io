@@ -341,57 +341,8 @@
 							</article>
 
 							<!-- 6 -->
-							<!-- tags -->
-							<!-- 여섯번째 -->
-							<article class="post type-post status-publish format-standard hentry">
-								<!-- .entry-header -->
-								<header class="entry-header">
-									<!-- {{ $baseurl := .Site.BaseURL }} -->
-									<div class="entry-meta">
-										<span class="cat-links">
-                							<!-- {{ range .Params.categories }} ->
-                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
-                							<!- {{ end }} -->
-										</span>
-									</div>
-
-									<h1 class="entry-title">tags</h1>
-									<div class="entry-meta">
-										<span class="entry-date">
-											<a href="https://dprigh.github.io/categories/tags/tags.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
-													December 11
-													<!-- {{ .Date.Format "January 2" }} -->
-												</time>
-											</a>
-										</span>
-									</div><!-- .entry-meta -->
-								</header>
-
-								<div class="entry-content">
-									<a href="https://dprigh.github.io/categories/tags/tags.html">
-										<h2>
-											<p>#tags#</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
-										</h2>
-									</a>
-									<!-- {{ .Content }} -->
-								</div><!-- .entry-content -->
-
-								<footer class="entry-meta">
-									<span class="tag-links">		
-										<!-- {{ range .Params.tags }} -->
-                						<a href="https://dprigh.github.io/categories/tags/tags.html" rel="tag">
-                							.tags
-                						</a>
-            							<!-- {{ end }} -->
-									</span>
-								</footer>
-							</article> <!-- ## 6 ## -->
-
-							<!-- 7 -->
 							<!-- c++ -->
-							<!-- 일곱번째 -->
+							<!-- 여섯번째 -->
 							<article class="post type-post status-publish format-standard hentry">
 								<!-- .entry-header -->
 								<header class="entry-header">
@@ -436,6 +387,55 @@
             							<!-- {{ end }} -->
 									</span>
 								</footer>
+							</article> <!-- ## 6 ## -->
+
+							<!-- 7 -->
+							<!-- tags -->
+							<!-- 일곱번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
+								<header class="entry-header">
+									<!-- {{ $baseurl := .Site.BaseURL }} -->
+									<div class="entry-meta">
+										<span class="cat-links">
+                							<!-- {{ range .Params.categories }} ->
+                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
+                							<!- {{ end }} -->
+										</span>
+									</div>
+
+									<h1 class="entry-title">tags</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/tags/tags.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
+													December 11
+													<!-- {{ .Date.Format "January 2" }} -->
+												</time>
+											</a>
+										</span>
+									</div><!-- .entry-meta -->
+								</header>
+
+								<div class="entry-content">
+									<a href="https://dprigh.github.io/categories/tags/tags.html">
+										<h2>
+											<p>#tags#</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+									<!-- {{ .Content }} -->
+								</div><!-- .entry-content -->
+
+								<footer class="entry-meta">
+									<span class="tag-links">		
+										<!-- {{ range .Params.tags }} -->
+                						<a href="https://dprigh.github.io/categories/tags/tags.html" rel="tag">
+                							.tags
+                						</a>
+            							<!-- {{ end }} -->
+									</span>
+								</footer>
 							</article> <!-- ## 7 ## -->
 							<!-- {{ end }} -->
 
@@ -460,7 +460,7 @@
 		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		
+
 					<!--
 					{{ partial "sidebar.html" . }} = 사이드바
 					-->
@@ -594,7 +594,7 @@
 
 									<!-- 6 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/tags/tags.html">tags</a>
+										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
 										<!--
 											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
 										-->
@@ -602,10 +602,10 @@
 
 									<!-- 7 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
+										<a href="https://dprigh.github.io/categories/tags/tags.html">tags</a>
 										<!--
 											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										-->										
 									</li>
 									<!-- {{ end }} -->
 								</ul>
