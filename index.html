@@ -175,8 +175,8 @@
 					</div><!-- #secondary -->
 
 
-
-
+		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
 
@@ -191,61 +191,240 @@
 							<!--
 							{{ partial "content.html" . }} = 컨텐츠
 							-->
+
+							<!-- 1 -->
+							<!-- github -->
+							<!-- 첫번째 -->
 							<article class="post type-post status-publish format-standard hentry">
-								<!-- .entry-header -->
 								<header class="entry-header">
-									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-                							<!-- {{ range .Params.categories }} ->
-                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
-                							<!- {{ end }} -->
-										</span>
+											<!-- 이거 왜 있는지 모르겠음. -->
+                							<!-- {{ range .Params.categories }} -->
+                						</span>
 									</div>
 
-
-
+									<!-- 메인 페이지 제목 부분 -->
+									<!-- 변경해야 하는 부분! -->
+									<!-- h1 하면? 왜 대문자로 써짐? -->
 									<h1 class="entry-title">github</h1>
-
-
-
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
-													December 11
-													<!-- {{ .Date.Format "January 2" }} -->
+												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
+													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
 												</time>
 											</a>
 										</span>
-									</div><!-- .entry-meta -->
+									</div>
 								</header>
-
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
-									<p>This is a new page using github.</p>
-									<!-- {{ .Content }} -->
-								</div><!-- .entry-content -->
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://github.com/dprigh?tab=repositories">
+										<h2>
+											<p>dprigh github repo.</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+								</div>
 
+								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-										<!-- {{ range .Params.tags }} -->
-                						<a href="https://dprigh.github.io/categories/github/github.html" rel="tag">
-                							.github
-                						</a>
-            							<!-- {{ end }} -->
+                						<a href="https://github.com/gohugoio/hugo" rel="tag">.hugo</a>
 									</span>
 								</footer>
-							</article> <!-- #post-## -->
-							<!-- {{ end }} -->
+							</article>
 
+							<!-- 2 -->
+							<!-- posts -->
+							<!-- 두번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<header class="entry-header">
+									<div class="entry-meta">
+										<span class="cat-links">
+											<!-- 이거 왜 있는지 모르겠음. -->
+                							<!-- {{ range .Params.categories }} -->
+                						</span>
+									</div>
 
+									<!-- 메인 페이지 제목 부분 -->
+									<!-- 변경해야 하는 부분! -->
+									<!-- h1 하면? 왜 대문자로 써짐? -->
+									<h1 class="entry-title">post</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/posts/post.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
+													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												</time>
+											</a>
+										</span>
+									</div>
+								</header>
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
+								<div class="entry-content">
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://dprigh.github.io/categories/posts/post.html">
+										<h2>
+											<p>dprigh post.</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+								</div>
 
+								<!-- 내용 다음 태그 추가하는 부분. -->
+								<footer class="entry-meta">
+									<span class="tag-links">		
+                						<a href="https://dprigh.github.io/categories/posts/post.html" rel="tag">.post</a>
+									</span>
+								</footer>
+							</article>
 
+							<!-- 3 -->
+							<!-- go -->
+							<!-- 세번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<header class="entry-header">
+									<div class="entry-meta">
+										<span class="cat-links">
+											<!-- 이거 왜 있는지 모르겠음. -->
+                							<!-- {{ range .Params.categories }} -->
+                						</span>
+									</div>
 
+									<!-- 메인 페이지 제목 부분 -->
+									<!-- 변경해야 하는 부분! -->
+									<!-- h1 하면? 왜 대문자로 써짐? -->
+									<h1 class="entry-title">go</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/go/go.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
+													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												</time>
+											</a>
+										</span>
+									</div>
+								</header>
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
+								<div class="entry-content">
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://dprigh.github.io/categories/go/go.html">
+										<h2>
+											<p>go blog.</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+								</div>
 
+								<!-- 내용 다음 태그 추가하는 부분. -->
+								<footer class="entry-meta">
+									<span class="tag-links">		
+                						<a href="https://blog.golang.org/" rel="tag">.go</a>
+									</span>
+								</footer>
+							</article>
 
+							<!-- 4 -->
+							<!-- java -->
+							<!-- 네번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<header class="entry-header">
+									<div class="entry-meta">
+										<span class="cat-links">
+											<!-- 이거 왜 있는지 모르겠음. -->
+                							<!-- {{ range .Params.categories }} -->
+                						</span>
+									</div>
 
-							<!-- 메인 부분 계속 추가 하려면 여기에 -->
+									<!-- 메인 페이지 제목 부분 -->
+									<!-- 변경해야 하는 부분! -->
+									<!-- h1 하면? 왜 대문자로 써짐? -->
+									<h1 class="entry-title">java</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/java/java.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
+													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												</time>
+											</a>
+										</span>
+									</div>
+								</header>
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
+								<div class="entry-content">
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://www.java.com/">
+										<h2>
+											<p>java.com</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+								</div>
+
+								<!-- 내용 다음 태그 추가하는 부분. -->
+								<footer class="entry-meta">
+									<span class="tag-links">		
+                						<a href="https://www.oracle.com/" rel="tag">.oracle</a>
+									</span>
+								</footer>
+							</article>
+
+							<!-- 5 -->
+							<!-- python -->
+							<!-- 다섯번째 -->
+							<article class="post type-post status-publish format-standard hentry">
+								<header class="entry-header">
+									<div class="entry-meta">
+										<span class="cat-links">
+											<!-- 이거 왜 있는지 모르겠음. -->
+                							<!-- {{ range .Params.categories }} -->
+                						</span>
+									</div>
+
+									<!-- 메인 페이지 제목 부분 -->
+									<!-- 변경해야 하는 부분! -->
+									<!-- h1 하면? 왜 대문자로 써짐? -->
+									<h1 class="entry-title">python</h1>
+									<div class="entry-meta">
+										<span class="entry-date">
+											<a href="https://dprigh.github.io/categories/python/python.html" rel="bookmark">
+												<time class="entry-date" datetime="2019-12-11 11:19:40 -KST">December 11
+													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												</time>
+											</a>
+										</span>
+									</div>
+								</header>
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
+								<div class="entry-content">
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://www.python.org/">
+										<h2>
+											<p>python.org</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
+								</div>
+
+								<!-- 내용 다음 태그 추가하는 부분. -->
+								<footer class="entry-meta">
+									<span class="tag-links">		
+                						<a href="https://docs.python.org/3/" rel="tag">.docs</a>
+									</span>
+								</footer>
+							</article>
+
+							<!-- 6 -->
+							<!-- c++ -->
+							<!-- 여섯번째 -->
 							<article class="post type-post status-publish format-standard hentry">
 								<!-- .entry-header -->
 								<header class="entry-header">
@@ -258,15 +437,10 @@
 										</span>
 									</div>
 
-
-
-									<h1 class="entry-title">post</h1>
-
-
-
+									<h1 class="entry-title">c++</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
-											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
+											<a href="https://dprigh.github.io/categories/cpp/cpp.html" rel="bookmark">
 												<time class="entry-date" datetime="2019-12-11 12:03:10-KST">
 													December 11
 													<!-- {{ .Date.Format "January 2" }} -->
@@ -277,30 +451,32 @@
 								</header>
 
 								<div class="entry-content">
-									<p>This is a new page using github.</p>
+									<a href="https://isocpp.org/">
+										<h2>
+											<p>cpp.org</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
+										</h2>
+									</a>
 									<!-- {{ .Content }} -->
 								</div><!-- .entry-content -->
 
 								<footer class="entry-meta">
 									<span class="tag-links">		
 										<!-- {{ range .Params.tags }} -->
-                						<a href="https://dprigh.github.io/categories/github/github.html" rel="tag">
-                							.github
+                						<a href="https://visualstudio.microsoft.com/" rel="tag">
+                							.V.S
                 						</a>
             							<!-- {{ end }} -->
 									</span>
 								</footer>
-							</article> <!-- #post-## -->
+							</article> <!-- ## 6 ## -->
 							<!-- {{ end }} -->
 						</div><!-- #content -->
 
 
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->	
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-						<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+
+
 
 
 						<!--
@@ -313,10 +489,13 @@
     						async>
 						</script>
 						-->
-					</div><!-- #primary -->
 
+
+
+					</div><!-- #primary -->
 			
 				</div><!-- #main-content -->
+
 			</div><!-- #main -->
 			
 		
