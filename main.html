@@ -32,24 +32,32 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="header-main">
 					<h1 class="site-title">
-						<a href="https://dprigh.github.io/" rel="home">DPRIGH BLOG</a>
+						<a href="https://dprigh.github.io/" rel="home">
+							DPRIGH BLOG
+						</a>
 					</h1>
 
 					<div class="search-toggle">
-						<a href="#search-container" class="screen-reader-text">Search</a>
+						<a href="#search-container" class="screen-reader-text">
+							Search
+						</a>
 					</div>
 
 					<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-						<button class="menu-toggle">Primary Menu</button>
-						<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+						<button class="menu-toggle">
+							Primary Menu
+						</button>
+						<a class="screen-reader-text skip-link" href="#content">
+							Skip to content
+						</a>
 						<div class="nav-menu">
 							<ul>
 								<!-- 상단 링크 추가 -->
 								<li class="page_item">
-									<a href="https://dprigh.github.io/about/about.html">about</a>
+									<a href="https://dprigh.github.io/about/about.html">
+										about
+									</a>
 								</li>
-
-
 							</ul>
 						</div>
 					</nav>
@@ -72,7 +80,9 @@
 
 								<input name="q" type="hidden" />
 	    							<label>
-	        							<span class="screen-reader-text">Search for:</span>
+	        							<span class="screen-reader-text">
+	        								Search for:
+	        							</span>
 	        							<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
 	    							</label>
 	    						<input type="submit" value="Search" class="search-submit" />
@@ -83,20 +93,23 @@
 			</header><!-- #masthead -->
 
 
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
 
-			<!-- main 메인 -->
+			
+
+			<!--
+				main 메인
+			-->
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+
+
+
+					
+					<!--
+						primary
+					-->
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
 
@@ -112,33 +125,42 @@
 							{{ partial "content.html" . }} = 컨텐츠
 							-->
 
-							<!-- 1 -->
-							<!-- github -->
+
+
+							<!--
+								본문 프레임 + 본문 보여줄 내용 + 바뀌는 부분
+								article로 나누어서 표현
+							-->
+							
+
 							<!-- 첫번째 -->
 							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
 								<header class="entry-header">
+									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 메인 내용 제목 위에 작은 글씨 링크 -->
 											<!--
-											<a href="http://dprigh.github.io/categories/posts/posts.html" rel="category">posts</a>
+												메인 내용 제목 위에 작은 글씨 링크
+												<a href="" rel="">{보여질 내용}</a>
 											-->
                 						</span>
 									</div>
-
-									<!-- 메인 페이지 제목 부분 -->
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">github</h1>
+									<!--
+										h1 하면? 왜 대문자로 써짐?
+									-->
+									<h1 class="entry-title">
+										github
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
+													<!-- {{ "2015-01-06 11:16:42 -0500 EST"> January 6 }} -->
 												</time>
 											</a>
 										</span>
-									</div>
+									</div><!-- .entry-meta -->
 								</header>
 								
 								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
@@ -146,16 +168,21 @@
 									<!-- 이렇게 하면 링크 걸 수 있음. -->
 									<a href="https://github.com/dprigh?tab=repositories" target="_blank">
 										<h2>
-											<p>dprigh github repo.</p>
+											<p>
+												dprigh github repo.
+											</p>
 											<!-- 초록색으로 하이퍼링크 나옴 -->
 										</h2>
 									</a>
-								</div>
+									<!-- {{ .Content }} -->
+								</div><!-- .entry-content -->
 
 								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://github.com/gohugoio/hugo" rel="tag" target="_blank">.hugo</a>
+                						<a href="https://github.com/gohugoio/hugo" rel="tag" target="_blank">
+                							.hugo
+                						</a>
 									</span>
 								</footer>
 							</article>
@@ -167,41 +194,37 @@
 								<header class="entry-header">
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 이거 왜 있는지 모르겠음. -->
-                							<!-- {{ range .Params.categories }} -->
                 						</span>
 									</div>
 
-									<!-- 메인 페이지 제목 부분 -->
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">posts</h1>
+									<h1 class="entry-title">
+										posts
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/posts/posts.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
 									</div>
 								</header>
 								
-								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
-									<!-- 이렇게 하면 링크 걸 수 있음. -->
 									<a href="https://dprigh.github.io/categories/posts/posts.html">
 										<h2>
-											<p>dprigh posts.</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												dprigh posts.
+											</p>
 										</h2>
 									</a>
 								</div>
 
-								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://dprigh.github.io/categories/posts/posts.html" rel="tag">.post</a>
+                						<a href="https://dprigh.github.io/categories/posts/posts.html" rel="tag">
+                							.post
+                						</a>
 									</span>
 								</footer>
 							</article>
@@ -213,41 +236,37 @@
 								<header class="entry-header">
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 이거 왜 있는지 모르겠음. -->
-                							<!-- {{ range .Params.categories }} -->
                 						</span>
 									</div>
 
-									<!-- 메인 페이지 제목 부분 -->
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">go</h1>
+									<h1 class="entry-title">
+										go
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/go/go.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
 									</div>
 								</header>
-								
-								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
+
 								<div class="entry-content">
-									<!-- 이렇게 하면 링크 걸 수 있음. -->
 									<a href="https://dprigh.github.io/categories/go/go.html" target="-_blank">
 										<h2>
-											<p>go blog.</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												go blog.
+											</p>
 										</h2>
 									</a>
 								</div>
 
-								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://blog.golang.org/" rel="tag" target="-_blank">.go</a>
+                						<a href="https://blog.golang.org/" rel="tag" target="-_blank">
+                							.go
+                						</a>
 									</span>
 								</footer>
 							</article>
@@ -259,41 +278,37 @@
 								<header class="entry-header">
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 이거 왜 있는지 모르겠음. -->
-                							<!-- {{ range .Params.categories }} -->
                 						</span>
 									</div>
 
-									<!-- 메인 페이지 제목 부분 -->
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">java</h1>
+									<h1 class="entry-title">
+										java
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/java/java.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
 									</div>
 								</header>
 								
-								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
-									<!-- 이렇게 하면 링크 걸 수 있음. -->
 									<a href="https://www.java.com/" target="-_blank">
 										<h2>
-											<p>java.com</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												java.com
+											</p>
 										</h2>
 									</a>
 								</div>
 
-								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://www.oracle.com/" rel="tag" target="-_blank">.oracle</a>
+                						<a href="https://www.oracle.com/" rel="tag" target="-_blank">
+                							.oracle
+                						</a>
 									</span>
 								</footer>
 							</article>
@@ -305,41 +320,37 @@
 								<header class="entry-header">
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 이거 왜 있는지 모르겠음. -->
-                							<!-- {{ range .Params.categories }} -->
                 						</span>
 									</div>
 
-									<!-- 메인 페이지 제목 부분 -->
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h1 class="entry-title">python</h1>
+									<h1 class="entry-title">
+										python
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/python/python.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
 									</div>
 								</header>
 								
-								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
-									<!-- 이렇게 하면 링크 걸 수 있음. -->
 									<a href="https://www.python.org/" target="-_blank">
 										<h2>
-											<p>python.org</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												python.org
+											</p>
 										</h2>
 									</a>
 								</div>
 
-								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://docs.python.org/3/" rel="tag" target="-_blank">.docs</a>
+                						<a href="https://docs.python.org/3/" rel="tag" target="-_blank">
+                							.docs
+                						</a>
 									</span>
 								</footer>
 							</article>
@@ -347,131 +358,155 @@
 							<!-- 6 -->
 							<!-- c++ -->
 							<!-- 여섯번째 -->
-							<article class="post type-post status-publish format-standard hentry">
-								<!-- .entry-header -->
+							<article class="post type-post status-publish format-standard hentry">								
 								<header class="entry-header">
-									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-                							<!-- {{ range .Params.categories }} ->
-                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
-                							<!- {{ end }} -->
 										</span>
 									</div>
 
-									<h1 class="entry-title">c++</h1>
+									<h1 class="entry-title">
+										c++
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/cpp/cpp.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ .Date.Format "January 2" }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
-									</div><!-- .entry-meta -->
+									</div>
 								</header>
 
 								<div class="entry-content">
 									<a href="https://isocpp.org/" target="-_blank">
 										<h2>
-											<p>cpp.org</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												cpp.org
+											</p>
 										</h2>
 									</a>
-									<!-- {{ .Content }} -->
-								</div><!-- .entry-content -->
+								</div>
 
 								<footer class="entry-meta">
 									<span class="tag-links">		
-										<!-- {{ range .Params.tags }} -->
                 						<a href="https://visualstudio.microsoft.com/" rel="tag" target="-_blank">
                 							.V.S
                 						</a>
-            							<!-- {{ end }} -->
 									</span>
 								</footer>
-							</article> <!-- ## 6 ## -->
+							</article>
 
 							<!-- 7 -->
 							<!-- tags -->
 							<!-- 일곱번째 -->
 							<article class="post type-post status-publish format-standard hentry">
-								<!-- .entry-header -->
 								<header class="entry-header">
-									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-                							<!-- {{ range .Params.categories }} ->
-                							<a href="https://dprigh.github.io/categories/index.html" rel="category"><!- {{ lower . | urlize }} + {{ . }} -></a>
-                							<!- {{ end }} -->
 										</span>
 									</div>
 
-									<h1 class="entry-title">tags</h1>
+									<h1 class="entry-title">
+										tags
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/tags/tags.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
-													<!-- {{ .Date.Format "January 2" }} -->
+												<time class="entry-date" datetime="2019-12-12 12:48:00 +0900 KST">
 												</time>
 											</a>
 										</span>
-									</div><!-- .entry-meta -->
+									</div>
 								</header>
 
 								<div class="entry-content">
 									<a href="https://dprigh.github.io/categories/tags/tags.html">
 										<h2>
-											<p>#tags#</p>
-											<!-- 초록색으로 하이퍼링크 나옴 -->
+											<p>
+												tags
+											</p>
 										</h2>
 									</a>
-									<!-- {{ .Content }} -->
-								</div><!-- .entry-content -->
+								</div>
 
 								<footer class="entry-meta">
 									<span class="tag-links">		
-										<!-- {{ range .Params.tags }} -->
                 						<a href="https://dprigh.github.io/categories/tags/tags.html" rel="tag">
                 							.tags
                 						</a>
-            							<!-- {{ end }} -->
 									</span>
 								</footer>
-							</article> <!-- ## 7 ## -->
-							<!-- {{ end }} -->
+							</article>
 
-						</div><!-- #content -->
-
-						<!--
-						댓글 스크립트 메인에는 필요가 없어서 숨김 ->
-						<script src="https://utteranc.es/client.js"
-    		  				repo="dprigh/hugo_comments"
-    		  				issue-term="pathname"
-     						theme="github-light"
-      				  		crossorigin="anonymous"
-    						async>
-						</script>
-						-->
-
+							<!--
+								댓글 스크립트 메인에는 필요가 없어서 숨김
+							<script src="https://utteranc.es/client.js"
+    		  					repo="dprigh/hugo_comments"
+    		  					issue-term="pathname"
+     							theme="github-light"
+      				  			crossorigin="anonymous"
+    							async>
+							</script>
+							-->
+						</div>
 					</div><!-- #primary -->
 
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-		<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
 
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
 					<!--
-					{{ partial "sidebar.html" . }} = 사이드바
+						사이드바 설정
 					-->
 					<div id="secondary">
 						<!-- {{ if isset .Site.Params "Description" }} 
 						{{ with .Site.Params.Description }} -->
-						<h2 class="site-description">Welcome! dprigh blog.</h2>
+						<h2 class="site-description">
+							Welcome! dprigh blog.
+						</h2>
 						
-
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 							<!--
 							{{ partial "searchform.html" . }} = 검색창
@@ -496,67 +531,132 @@
 							</aside>
 
 
-							<!-- 메인 페이지 -->
-							<!-- 사이드바 메뉴 설정 -->
-							<!-- 1 -->
-							<!-- Recent post -->
-							<!-- 최근 포스트 -->
-							<!-- github / post / go / java / python / tag / cpp -->
-							<aside id="recent-posts-3" class="widget widget_recent_entries">
-								<!-- {{ if isset .Data "Pages" }} -->
-								<h1 class="widget-title">Recent Posts</h1>
-								<ul>
-									<!-- {{ range first 5 (where .Data.Pages "Section" "post") }} -->
-									<!-- 최근 5개만 표시하는거 어떻게 함? -->
-									<!-- 일단 5개 다 집어 넣음. -->
 
-									<!-- 1 -->
-									<li>
-										<a href="https://dprigh.github.io/categories/github/github.html">github</a>
-									</li>
-									<!-- 2 -->			
-									<li>
-										<a href="https://dprigh.github.io/categories/posts/posts.html">posts</a>
-									</li>
-									<!-- 3 -->			
-									<li>
-										<a href="https://dprigh.github.io/categories/go/go.html">go</a>
-									</li>
-									<!-- 4 -->			
-									<li>
-										<a href="https://dprigh.github.io/categories/java/java.html">java</a>
-									</li>
-									<!-- 5 -->
-									<li>
-										<a href="https://dprigh.github.io/categories/python/python.html">python</a>
-									</li>
-									<!-- 6 -->
-									<!--
-									<li>
-										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
-									</li>
-									-->
-								</ul>
-								<!-- {{ end }} -->
-							</aside>
+							
+
+
 
 
 							<!--
-							{{ partial "categories.html" . }} = 카테고리
+								좌측 사이드바 # 최근 포스트 # 탭 설정
+							-->
+							<aside id="recent-posts-3" class="widget widget_recent_entries">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">
+									# Recent Posts #
+								</h1>
+								<ul>
+									<!-- {{ range first 5 (where .Data.Pages "Section" "post") }} -->
+									<!-- 최근 5개만 표시하는거 어떻게 함? -->
+
+									<!-- 1 -->
+									<!--
+										깃허브는 굳이 보여줄 필요가 없다고 생각
+									<li>
+										<a href="https://dprigh.github.io/categories/github/github.html"> ● Github </a>
+									</li>
+									-->
+									<!-- 2 -->			
+									<li>
+										<a href="https://dprigh.github.io/categories/posts/posts.html">
+											● Posts
+										</a>
+									</li>
+
+									<!-- 3 -->			
+									<li>
+										<a href="https://dprigh.github.io/categories/go/go.html">
+											● Go
+										</a>
+									</li>
+
+									<!-- 4 -->	
+									<!--
+										19.12.12 까지는 java랑 python은 하지 않으니까	
+									<li>
+										<a href="https://dprigh.github.io/categories/java/java.html"> ● Java </a>
+									</li>
+									
+									<!- 5 ->
+									<li>
+										<a href="https://dprigh.github.io/categories/python/python.html"> ● Python </a>
+									</li>
+									
+									<!- 6 ->
+									<li>
+										<a href="https://dprigh.github.io/categories/cpp/cpp.html"> ● C++ </a>
+									</li>
+									-->
+								</ul>
+							</aside>
+
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!--
+								좌측 사이드바 # 카테고리 # 탭 설정
 							-->
 							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Categories</h1>
+								<h1 class="widget-title">
+									# Categories #
+								</h1>
 								<ul>
 									<!-- {{ $baseurl := .Site.BaseURL }}
 									{{ range $key, $value := .Site.Taxonomies.categories }} -->
 
-									<!-- 여기는 왜 li class인가? -->
-									<!-- recent post는 그냥 li 임 -->
+									<!-- recent post는 <li> -->
+									<!-- categories는 <li class="> -->
 									<!-- 차이점은? -->
 
 									<!-- 1 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/github/github.html">github</a>
+										<a href="https://dprigh.github.io/categories/github/github.html">
+											1. Github
+										</a>
 										<!--
 											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
 										-->
@@ -564,55 +664,107 @@
 
 									<!-- 2 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/posts/posts.html">posts</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										<a href="https://dprigh.github.io/categories/posts/posts.html">
+											2. Posts
+										</a>
 									</li>
 
 									<!-- 3 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/go/go.html">go</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										<a href="https://dprigh.github.io/categories/go/go.html">
+											3. Go
+										</a>
 									</li>
 
 									<!-- 4 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/java/java.html">java</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										<a href="https://dprigh.github.io/categories/java/java.html">
+											4. Java
+										</a>
 									</li>
 
 									<!-- 5 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/python/python.html">python</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										<a href="https://dprigh.github.io/categories/python/python.html">
+											5. Python
+										</a>
 									</li>
 
 									<!-- 6 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/cpp/cpp.html">c++</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->
+										<a href="https://dprigh.github.io/categories/cpp/cpp.html">
+											6. C++
+										</a>
 									</li>
 
 									<!-- 7 -->
 									<li class="cat-item">
-										<a href="https://dprigh.github.io/categories/tags/tags.html">tags</a>
-										<!--
-											<a href="https://dprigh.github.io/categories/{{ $key | urlize }}/index.html"><!- {{ $key | title }} -></a>
-										-->										
+										<a href="https://dprigh.github.io/categories/tags/tags.html">
+											7. Tags
+										</a>						
 									</li>
-									<!-- {{ end }} -->
 								</ul>
 							</aside>
 
+							
+
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!--
+								좌측 사이드바 # Github Link # 탭 설정
+							-->
+							<aside id="github-link" class="widget widget_github">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">
+									# Github Link #
+								</h1>
+								<ul>
+									<li class="cat-item">
+										<a href="https://github.com/dprigh?tab=repositories" target="_blank">
+											● dprigh repo
+										</a>
+									</li>
+
+									<li class="cat-item">
+										<a href="https://github.com/gohugoio/hugo" target="_blank">
+											● hugo
+										</a>
+									</li>
+									
+									<li class="cat-item">
+										<a href="https://github.com/jaden/twentyfourteen" target="_blank">
+											● twentyfourteen theme
+										</a>
+									</li>
+								</ul>
+							</aside>
 
 							<!-- gists.html
 							<aside id="categories-3" class="widget widget_categories">
@@ -633,6 +785,116 @@
 			</div><!-- #main -->
 			
 		
+
+
+			
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 			<!-- footer.html 바닥글 -->
