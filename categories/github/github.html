@@ -92,20 +92,11 @@
 				</div>
 			</header><!-- #masthead -->
 
-
-
-			
-
-
 			<!--
 				main 메인
 			-->
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
-
-					
-
-
 
 					<!--
 						primary
@@ -200,303 +191,6 @@
 						</div>
 					</div><!-- primary -->
 
-
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 					<!--
 						사이드바 설정
 					-->
@@ -504,7 +198,7 @@
 						<!-- {{ if isset .Site.Params "Description" }} 
 						{{ with .Site.Params.Description }} -->
 						<h2 class="site-description">
-							Welcome! dprigh blog.
+							Github dprigh
 						</h2>
 						
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
@@ -530,220 +224,59 @@
 								</form>
 							</aside>
 
-
-
-
-
-
-
-
-							
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 							<!--
-								좌측 사이드바 # Github Link # 탭 설정
+								좌측 사이드바 # Git # 탭 설정
 							-->
-							<aside id="github-link" class="widget widget_github">
+							<aside id="git" class="widget widget_git">
 								<!-- {{ if isset .Data "Pages" }} -->
 								<h1 class="widget-title">
-									# Github Link #
+									# Git #
+								</h1>
+								<ul>
+									<li class="cat-item">
+										<a href="/git/what.md" target="_blank">
+											- What?
+										</a>
+									</li>
+
+									<li class="cat-item">
+										<a href="/git/install.md" target="">
+											- Install
+										</a>
+									</li>
+								</ul>
+							</aside>
+
+							<!--
+								좌측 사이드바 # Github # 탭 설정
+							-->
+							<aside id="github" class="widget widget_github">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">
+									# Github #
+								</h1>
+								<ul>
+									<li class="cat-item">
+										<a href="/github/what.md" target="_blank">
+											- What?
+										</a>
+									</li>
+
+									<li class="cat-item">
+										<a href="/github/install.md" target="">
+											- Install
+										</a>
+									</li>
+								</ul>
+							</aside>
+
+							<!--
+								좌측 사이드바 # Devhub Link # 탭 설정
+							-->
+							<aside id="dev-link" class="widget widget_dev-link">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">
+									# Devhub Link #
 								</h1>
 								<ul>
 									<li class="cat-item">
