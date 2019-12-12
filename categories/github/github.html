@@ -32,20 +32,31 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="header-main">
 					<h1 class="site-title">
-						<a href="https://dprigh.github.io/" rel="home">DPRIGH BLOG</a>
+						<a href="https://dprigh.github.io/" rel="home">
+							DPRIGH BLOG
+						</a>
 					</h1>
 
 					<div class="search-toggle">
-						<a href="#search-container" class="screen-reader-text">Search</a>
+						<a href="#search-container" class="screen-reader-text">
+							Search
+						</a>
 					</div>
 
 					<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-						<button class="menu-toggle">Primary Menu</button>
-						<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+						<button class="menu-toggle">
+							Primary Menu
+						</button>
+						<a class="screen-reader-text skip-link" href="#content">
+							Skip to content
+						</a>
 						<div class="nav-menu">
 							<ul>
+								<!-- 상단 링크 추가 -->
 								<li class="page_item">
-									<a href="https://dprigh.github.io/about/about.html">about</a>
+									<a href="https://dprigh.github.io/about/about.html">
+										about
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -54,6 +65,9 @@
 
 				<div id="search-container" class="search-box-wrapper hide">
 					<div class="search-box">
+						<!--
+                		{{ partial "searchform.html" . }} = 검색창
+                		-->
                 		<script type="text/javascript">
     						function site_search(obj) {
     							var host = window.location.host;
@@ -66,7 +80,9 @@
 
 								<input name="q" type="hidden" />
 	    							<label>
-	        							<span class="screen-reader-text">Search for:</span>
+	        							<span class="screen-reader-text">
+	        								Search for:
+	        							</span>
 	        							<input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
 	    							</label>
 	    						<input type="submit" value="Search" class="search-submit" />
@@ -74,56 +90,105 @@
 						</aside>
 					</div>
 				</div>
-			</header>
+			</header><!-- #masthead -->
 
-<!-- ********************************************************************** -->
 
+
+			
+
+
+			<!--
+				main 메인
+			-->
 			<div id="main" class="site-main">
 				<div id="main-content" class="main-content">
 
-					<!-- primary 메인 설정 -->
+					
+
+
+
+					<!--
+						primary
+					-->
 					<div id="primary" class="content-area">
 						<div id="content" class="site-content" role="main">
+
+							<!-- archive-header 이거 왜있는지 모르겠음.
+							<header class="archive-header">
+								<h1 class="archive-title"><!- {{ .Title }} ->Archive</h1>
+							</header>
+							-->
+
+							<!-- {{ range where site.RegularPages "Type" "in" site.Params.mainSections }} -->
+
+							<!--
+							{{ partial "content.html" . }} = 컨텐츠
+							-->
+
+
+
+							<!--
+								본문 프레임 + 본문 보여줄 내용 + 바뀌는 부분
+								article로 나누어서 표현
+							-->
+							<!-- 1 -->
+							<!-- github -->
+							<!-- 첫번째 -->
 							<article class="post type-post status-publish format-standard hentry">
+								<!-- .entry-header -->
 								<header class="entry-header">
+									<!-- {{ $baseurl := .Site.BaseURL }} -->
 									<div class="entry-meta">
 										<span class="cat-links">
-											<!-- 이거 왜 있는지 모르겠음. -->
-                							<!-- {{ range .Params.categories }} -->
+											<!--
+												메인 내용 제목 위에 작은 글씨 링크
+												<a href="" rel="">{보여질 내용}</a>
+											-->
                 						</span>
 									</div>
-
-									<!-- 변경해야 하는 부분! -->
-									<!-- h1 하면? 왜 대문자로 써짐? -->
-									<h2 class="entry-title">github</h2>
+									<!--
+										h1 하면? 왜 대문자로 써짐?
+									-->
+									<h1 class="entry-title">
+										github
+									</h1>
 									<div class="entry-meta">
 										<span class="entry-date">
 											<a href="https://dprigh.github.io/categories/github/github.html" rel="bookmark">
-												<time class="entry-date" datetime="2019-12-12 12:48:00+09:00 KST">
+												<time class="entry-date" datetime="2019-12-12 12:48:00+0900 KST">
 													<!-- {{ "2015-01-06 11:16:42-0500 EST"> January 6 }} -->
 												</time>
 											</a>
 										</span>
-									</div>
+									</div><!-- .entry-meta -->
 								</header>
-
+								
+								<!-- 헤더 추가하고 제목 다음 보여질 내용 -->
 								<div class="entry-content">
-									<a href="https://github.com/dprigh?tab=repositories">
+									<!-- 이렇게 하면 링크 걸 수 있음. -->
+									<a href="https://github.com/dprigh?tab=repositories" target="_blank">
 										<h2>
-											<p>dprigh github repo.</p>
+											<p>
+												dprigh github repo.
+											</p>
+											<!-- 초록색으로 하이퍼링크 나옴 -->
 										</h2>
 									</a>
-								</div>
+									<!-- {{ .Content }} -->
+								</div><!-- .entry-content -->
 
+								<!-- 내용 다음 태그 추가하는 부분. -->
 								<footer class="entry-meta">
 									<span class="tag-links">		
-                						<a href="https://github.com/gohugoio/hugo" rel="tag">.hugo</a>
+                						<a href="https://github.com/gohugoio/hugo" rel="tag" target="_blank">
+                							.hugo
+                						</a>
 									</span>
 								</footer>
 							</article>
 
-							<!-- 이부분에 댓글 스크립트 들어가야함! -->
-							<!-- 댓글 스크립트 -->
+							<!--
+								댓글 스크립트 메인에는 필요가 없어서 숨김 -->
 							<script src="https://utteranc.es/client.js"
     		  					repo="dprigh/hugo_comments"
     		  					issue-term="pathname"
@@ -131,18 +196,321 @@
       				  			crossorigin="anonymous"
     							async>
 							</script>
-
+							<!-- -->
 						</div>
 					</div><!-- primary -->
 
 
-					<!-- 좌측 사이드바 설정 -->
-					<div id="secondary">
-						<h2 class="site-description">link</h2>
-						<!-- h1, h2 텍스트 사이즈 같음 -->
+					
 
-						<!-- 좌측 사이드바에 검색탭 하나더 추가 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!--
+						사이드바 설정
+					-->
+					<div id="secondary">
+						<!-- {{ if isset .Site.Params "Description" }} 
+						{{ with .Site.Params.Description }} -->
+						<h2 class="site-description">
+							Welcome! dprigh blog.
+						</h2>
+						
 						<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+							<!--
+							{{ partial "searchform.html" . }} = 검색창
+							-->
 							<script type="text/javascript">
     							function site_search(obj) {
     								var host = window.location.host;
@@ -162,15 +530,38 @@
 								</form>
 							</aside>
 
-							<aside id="recent-posts-3" class="widget widget_recent_entries">
-							<!-- recent-posts-3 위치에 아무것도 표시 안함. -->
-							</aside>
 
-							<aside id="categories-3" class="widget widget_categories">
-								<h1 class="widget-title">Github Link</h1>
+
+
+
+
+
+
+							<!--
+								좌측 사이드바 # Github Link # 탭 설정
+							-->
+							<aside id="github-link" class="widget widget_github">
+								<!-- {{ if isset .Data "Pages" }} -->
+								<h1 class="widget-title">
+									# Github Link #
+								</h1>
 								<ul>
 									<li class="cat-item">
-										<a href="https://github.com/dprigh?tab=repositories">dprigh</a>
+										<a href="https://github.com/dprigh?tab=repositories" target="_blank">
+											● dprigh repo
+										</a>
+									</li>
+
+									<li class="cat-item">
+										<a href="https://github.com/gohugoio/hugo" target="_blank">
+											● hugo
+										</a>
+									</li>
+									
+									<li class="cat-item">
+										<a href="https://github.com/jaden/twentyfourteen" target="_blank">
+											● twentyfourteen theme
+										</a>
 									</li>
 								</ul>
 							</aside>
@@ -186,21 +577,234 @@
 								</ul>
 							</aside>
 							-->
-
 						</div>
-					</div><!-- secondary -->					
-				</div>
-			</div>
+					</div><!-- secondary -->
 
-<!-- ********************************************************************** -->
+				</div><!-- #main-content -->
+
+			</div><!-- #main -->
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			<!-- footer.html 바닥글 -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-					<a href="https://gohugo.io">Proudly powered by Hugo</a>
-				</div>
-			</footer>
-		</div>
+					<a href="https://gohugo.io" target="-_blank">Proudly powered by Hugo</a>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
+
 		<script type='text/javascript' src='https://dprigh.github.io/js/functions.js'></script>
 	</body>
 </html>
