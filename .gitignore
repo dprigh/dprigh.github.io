@@ -1,3 +1,12 @@
+hugo
+docs/public*
+hugo.exe
+*.test
+cover.out
+*.swp
+*.swo
+.DS_Store
+*~
 public
 themes/*
 !themes/twentyfourteen
