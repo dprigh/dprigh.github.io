@@ -1,3 +1,9 @@
+
+baseURL = "https://dprigh.github.io/"
+languageCode = "en-us"
+title = "Hugo nubi 'O '"
+theme = "twentyfourteen"
+
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.blackFriday]
